@@ -1,0 +1,44 @@
+@import './_variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.font-20-14, .font-20-16, .font-20-12 {
+    font-size: 20px;
+    line-height: 140%;
+}
+
+.font-18-14 {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.font-16-14, .font-16, .font-16-13, .font-16-12 {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.font-14, .font-14-12, .font-14-13 {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.56px;
+}
+
+@media screen and (max-width: $land-768) {
+
+    .font-20-16 {
+        font-size: 16px;
+    }
+
+    .font-20-14, .font-18-14, .font-16-14 {
+        font-size: 14px;
+    }
+
+    .font-14-13, .font-16-13 {
+        font-size: 13px;
+    }
+
+    .font-20-12, .font-16-12, .font-14-12 {
+        font-size: 12px;
+    }
+}

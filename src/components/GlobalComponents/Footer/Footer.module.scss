@@ -1,0 +1,56 @@
+@import '../../../styles/_variables';
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin-top: 90px;
+
+  &Content {
+    background-color: #05060F;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .navTitle {
+    display: block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    color: $white70;
+    text-decoration: none;
+    margin-bottom: 10px;
+    line-height: 140%;
+
+    &Bolder {
+      font-weight: 700;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 30px;
+    padding: 0 20px 50px;
+
+    &Content {
+      flex-direction: column;
+      row-gap: 30px;
+      padding: 20px 0 15px;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .footerNav {
+      row-gap: 15px;
+    }
+
+    .nav-title {
+      font-size: 12px;
+    }
+  }
+}

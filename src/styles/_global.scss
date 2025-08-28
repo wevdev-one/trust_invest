@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: $inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #E8F1FA;
+  min-height: 100%;
+  height: auto;
+  color: $maintext;
+}
+
+button {
+  color: $maintext;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.Dropdown-control {
+  cursor: pointer;
+  font-style: normal!important;
+  font-size: 16px!important;
+  font-weight: 400;
+  background-color: transparent!important;
+  border: none!important;
+  color: rgba(0,0,0,0.7)!important;
+  text-transform: uppercase!important;
+  padding: 0 10px!important;
+  display: flex;
+  align-items: center;
+}
+
+.Dropdown-root {
+  position: relative;
+}
+.Dropdown-menu {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+.Dropdown-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 7px;
+}
+.Dropdown-arrow {
+  // display: none;
+  display: inline-block;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTEgMUw2LjE1MTUyIDZMMTEgMSIgc3Ryb2tlPSIjMjgyODI4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4=");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 9px;
+  transition: all 0.4s ease;
+  background-size: cover;
+}
+.Dropdown-option {
+  box-sizing: border-box;
+  color: rgba(51, 51, 51, 0.8);
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.is-open .Dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.mt-btn {
+  margin-top: 40px;
+}
+
+.mob_only {
+  display: none!important;
+}
+
+.ovf-hidden {
+  overflow: hidden;
+}
+
+.side-right {
+  overflow: hidden;
+  flex: 0 1 auto;
+}
+
+.zoomIn {
+  animation: zoomIn 0.5s linear;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.zoomOut {
+  animation: zoomOut 0.5s linear;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.padd-page {
+  padding-top: 160px;
+}
+
+.padd-acc {
+  padding-top: 90px;
+}
+
+.inner-side {
+  overflow: hidden;
+}
+
+.inner {
+  padding-top: 80px;
+  .side-right {
+    overflow: visible;
+  }
+}
+
+.swiper-slide-active {
+  background: linear-gradient(259deg, #9F20EA -9.76%, #6825FE 168.42%), rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(23.3100528717041px);
+}
+
+.swiper-grid-slider .swiper-slide-active, .pro-slider .swiper-slide-active, .vipacc-slider .swiper-slide-active {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.swiper-pagination {
+  position: relative!important;
+  bottom: unset!important;
+  top: unset!important;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff!important;
+  width: 6px;
+  height: 6px;
+  opacity: 0.15!important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #9F20EA!important;
+  opacity: 1!important;
+}
+
+.mt {
+  margin-top: 160px;
+
+  @media (max-width: 1100px) {
+      margin-top: 140px;
+  }
+
+  @media (max-width: 768px) {
+      margin-top: 120px;
+  }
+}
+
+.swiper-fade {
+  .swiper-slide {
+    opacity: 0!important;
+  }
+  .swiper-slide-active {
+    opacity: 1!important;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .standartacc-slider {
+    .swiper-slide-active + .swiper-slide {
+      transform: translateY(45px)!important;
+      transition: transform 0.4s linear;
+    }
+  }
+}
+
+.bolder {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+
+  .desk_only {
+    display: none!important;
+  }
+
+  .mob_only {
+    display: block!important;
+  }
+
+  .mt-btn {
+    margin-top: 40px;
+  }
+
+  .padd-page {
+    padding-top: 80px;
+  }
+
+  .standartacc-slider {
+    .swiper-slide-active {
+      background: transparent!important;
+      backdrop-filter: none;
+    }
+  }
+}
