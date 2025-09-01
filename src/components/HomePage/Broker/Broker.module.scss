@@ -1,0 +1,215 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .container {
+    position: relative;
+  }
+
+  .title {
+    color: #05060F;
+  }
+
+  .grid {
+    display: grid;
+    gap: 12px;
+
+    &Item {
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background: #FFF;
+    }
+  }
+
+  .item {
+    &Title {
+      color: #000;
+      font-weight: 500;
+      font-family: $manrope;
+      line-height: 150%;
+    }
+  }
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .title {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .container {
+      min-height: 430px;
+      padding-top: 145px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 312px);
+      margin: 40px auto 0;
+      justify-content: space-between;
+      max-width: 720px;
+
+      &Item {
+        min-height: 120px;
+        padding: 20px;
+      }
+    }
+
+    .image {
+      max-width: 273px;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+
+    .icon {
+      width: 36px;
+      height: 48px;
+    }
+
+    .btn {
+      margin-top: 60px;
+    }
+
+    .cnmv {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 98px;
+      // height: 98px;
+    }
+
+    .fca {
+      bottom: 5%;
+      right: 10%;
+      width: 98px;
+      // height: 98px;
+    }
+
+    .great {
+      bottom: 1%;
+      left: 8%;
+      // height: 75px;
+      width: 230px;
+    }
+
+    .like {
+      top: 20%;
+      right: 10%;
+      width: 147px;
+      // height: 132px;
+    }
+
+    .success {
+      top: 2%;
+      right: 30%;
+      width: 183px;
+      // height: 112px;
+    }
+
+    .trust {
+      top: 0%;
+      left: 20%;
+      width: 172px;
+      // height: 88px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 100px;
+    }
+
+    .title {
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      &Item {
+        min-height: 108px;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .itemTitle {
+      text-align: center;
+    }
+
+    .icon {
+      width: 22px;
+      height: 29px;
+    }
+
+    .btn {
+      margin-top: 30px;
+    }
+
+    .cnmv {
+      left: 3%;
+      bottom: 15%;
+      width: 65px;
+      // height: 98px;
+    }
+
+    .fca {
+      bottom: 14%;
+      right: 6%;
+      width: 65px;
+      // height: 98px;
+    }
+
+    .like {
+      top: 3%;
+      right: 15%;
+      width: 83px;
+      // height: 132px;
+    }
+
+    .success {
+      top: 0%;
+      right: 38%;
+      width: 88px;
+      // height: 112px;
+    }
+
+    .trust {
+      top: 2%;
+      left: 10%;
+      width: 96px;
+      // height: 88px;
+    }
+  }
+}

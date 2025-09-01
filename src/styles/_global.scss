@@ -9,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  font-family: $inter;
+  font-family: $roboto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #E8F1FA;
@@ -32,6 +32,12 @@ code {
   padding: 0 20px;
   margin: 0 auto;
   height: 100%;
+}
+
+.titleColor {
+  span {
+    color: $colored;
+  }
 }
 
 .absolute {
@@ -142,7 +148,7 @@ code {
 }
 
 .padd-page {
-  padding-top: 160px;
+  padding-top: 60px;
 }
 
 .padd-acc {

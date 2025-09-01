@@ -1,0 +1,51 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #000;
+  }
+
+  .text {
+    color: $black70;
+    font-weight: 300;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .image {
+      height: 50px;
+      // margin: ;
+    }
+
+    .title {
+      max-width: 820px;
+      margin: 20px auto;
+    }
+
+    .text {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+}

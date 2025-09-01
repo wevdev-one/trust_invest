@@ -1,0 +1,115 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #000;
+    position: relative;
+    z-index: 2;
+
+    &Icon {
+      position: relative;
+    }
+  }
+
+  .text {
+    color: $black70;
+    font-weight: 300;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    color: #000;
+  }
+
+  .titleRight {
+    text-align: right;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 500px);
+      justify-content: space-between;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .title {
+      &Icon {
+        width: 100%;
+
+        & + .text {
+          margin-top: 40px;
+        }
+      }
+
+      &Right {
+        align-self: flex-end;
+      }
+    }
+
+    .subtitle {
+      margin-top: 15px;
+    }
+
+    .icon1 {
+      width: 135px;
+      height: 37px;
+      left: 0;
+      top: 5px;
+    }
+
+    .icon2 {
+      width: 172px;
+      height: 60px;
+      right: 0;
+    }
+
+    .text {
+      margin-top: 40px;
+      margin-top: auto;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 20px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .title1 {
+      padding-right: 25%;
+    }
+
+    .icon1 {
+      width: 68px;
+      height: 19px;
+      left: 0;
+      top: 5px;
+    }
+
+    .icon2 {
+      width: 81px;
+      height: 28px;
+      right: 25%;
+    }
+  }
+}

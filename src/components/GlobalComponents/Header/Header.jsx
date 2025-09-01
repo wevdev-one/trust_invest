@@ -111,7 +111,7 @@ const Header = () => {
                   onChange={handleChangeLang}
                   value={languages.find(lang => lang.value === currentLang)}
                 />
-                <div className={styles.mrl}><Button login header>{t('btn.start')}</Button></div>
+                <div className={styles.mrl}><Button login header>{t('btn.login')}</Button></div>
             </div>
           </nav>
         </div>

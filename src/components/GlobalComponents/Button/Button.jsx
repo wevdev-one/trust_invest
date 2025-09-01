@@ -40,8 +40,8 @@ const Button = ({ children, login, href, event, header, customLink, white, black
       }
       {!header && <div className={styles.icon}>
         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-          <path d="M12.353 21H29.6471" stroke="#05060F" stroke-width="1.10526" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M21 12.353L29.6471 21.0001L21 29.6471" stroke="#05060F" stroke-width="1.10526" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.353 21H29.6471" stroke="#F8F963" stroke-width="1.10526" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 12.353L29.6471 21.0001L21 29.6471" stroke="#F8F963" stroke-width="1.10526" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>}
     </Link>

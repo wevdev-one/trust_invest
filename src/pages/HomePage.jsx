@@ -3,6 +3,11 @@ import Header from '../components/GlobalComponents/Header/Header';
 import Footer from '../components/GlobalComponents/Footer/Footer';
 import HelmetLayout from '../components/GlobalComponents/HelmetLayout';
 import Banner from '../components/HomePage/Banner/Banner';
+import Mission from '../components/HomePage/Mission/Mission';
+import Assets from '../components/HomePage/Assets/Assets';
+import Broker from '../components/HomePage/Broker/Broker';
+import Verify from '../components/HomePage/Verify/Verify';
+import Profit from '../components/HomePage/Profit/Profit';
 
 function HomePage() {
   return (
@@ -14,6 +19,11 @@ function HomePage() {
       <div className='ovf-hidden padd-page'>
         <Header />
         <Banner />
+        <Mission />
+        <Assets />
+        <Broker />
+        <Verify />
+        <Profit />
         <Footer />
       </div>
     </HelmetLayout>

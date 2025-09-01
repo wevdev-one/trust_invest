@@ -1,0 +1,59 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #000;
+  }
+
+  .text {
+    color: $black70;
+    margin-top: 10px;
+    font-weight: 300;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .image {
+      max-width: 393px;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .text {
+      max-width: 500px;
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .image {
+      border-radius: 12px;
+      max-width: 243px;
+    }
+  }
+}

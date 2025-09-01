@@ -1,0 +1,169 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .container {
+    background-color: #05060F;
+    border-radius: 20px;
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .text {
+    color: $white70;
+    font-weight: 300;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  .grid {
+    display: grid;
+    gap: 12px;
+
+    &Item {
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #1E1F2A;
+
+      &:first-child {
+        .itemTitle {
+          color: $colored;
+        }
+      }
+
+      &:last-child {
+        .itemTitle {
+          color: $seccolor;
+        }
+      }
+    }
+  }
+
+  .item {
+    &Title {
+      font-weight: 500;
+    }
+
+    &Text {
+      font-weight: 300;
+      color: $white70;
+    }
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      position: relative;
+      gap: 20px;
+      padding: 80px 60px;
+      max-width: 1220px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+
+      .title {
+        max-width: 470px;
+      }
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 60px;
+      gap: 20px;
+
+      &Item {
+        min-height: 257px;
+        padding: 20px;
+      }
+    }
+
+    .content {
+      width: 50%;
+    }
+
+    .icon {
+      width: 68px;
+      height: 60px;
+      flex-shrink: 0;
+      aspect-ratio: 17/15;
+    }
+
+    .image {
+      max-width: 273px;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+
+    .subtitle {
+      margin: 20px 0 30px;
+    }
+
+    .flex {
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 20px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      margin-top: 40px;
+      &Item {
+        min-height: 163px;
+        padding: 20px;
+      }
+    }
+
+    .flex {
+      gap: 12px;
+    }
+
+    .subtitle {
+      margin: 12px 0;
+    }
+
+    .icon {
+      width: 43px;
+      height: 42px;
+      flex-shrink: 0;
+      aspect-ratio: 43/42;
+    }
+  }
+}

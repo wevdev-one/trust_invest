@@ -1,0 +1,56 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #fff;
+  }
+
+  .text {
+    color: $white70;
+    font-weight: 300;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 0 0 60px;
+
+    .container {
+      display: flex;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .text {
+      max-width: 360px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 0 0 40px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text {
+      margin: 20px 0;
+    }
+
+    .image {
+      margin-top: 40px;
+    }
+  }
+}

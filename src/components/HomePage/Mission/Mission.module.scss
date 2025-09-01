@@ -1,0 +1,167 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &Icon {
+      height: 53px;
+      width: 114px;
+      display: inline;
+      margin-top: 12px;
+    }
+
+    &Right {
+      text-align: right;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    &Span {
+      span {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          border-radius: 20px;
+          background: $colored;
+          width: 110%;
+          height: 110%;
+          left: -5%;
+          bottom: -5%;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .text {
+    color: $black70;
+    font-weight: 300;
+  }
+
+  .grid {
+    display: grid;
+    gap: 20px;
+
+    &Item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      // justify-content: flex-end;
+      border-radius: 20px;
+      background: #FFF;
+    }
+  }
+
+  .item {
+
+    &Index {
+      position: relative;
+      color: #05060F;
+
+      .icon {
+        position: absolute;
+        top: -14px;
+        left: -14px;
+        width: 92px;
+        height: 85px;
+      }
+    }
+
+    &Title {
+      font-weight: 500;
+      margin: 30px 0 12px;
+    }
+
+    &Title, &Text {
+      color: #05060F;
+    }
+
+    &Text {
+      font-weight: 300;
+    }
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .text {
+      max-width: 500px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 60px;
+
+      &Item {
+        min-height: 242px;
+        padding: 20px;
+
+        &:first-child, &:last-child {
+          grid-column: span 3;
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          grid-column: span 2;
+        }
+
+      }
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .title {
+      &Icon {
+        height: 33px;
+        width: 72px;
+        margin-top: 4px;
+      }
+    }
+
+    .text {
+      margin: 20px 0 0;
+    }
+
+    .item {
+      &Index {
+        .icon {
+          width: 57px;
+          height: 53px;
+        }
+      }
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      &Item {
+        min-height: 234px;
+        padding: 20px;
+      }
+    }
+  }
+}
