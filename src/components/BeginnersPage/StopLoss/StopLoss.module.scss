@@ -1,0 +1,57 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+    position: relative;
+  }
+
+  .text {
+    font-weight: 300;
+    color: $black70;
+
+    & + .text {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 500px);
+      justify-content: space-between;
+    }
+
+    .title {
+      margin-bottom: 40px;
+      padding-right: 25%;
+    }
+
+    .icon {
+      position: absolute;
+      width: 89px;
+      height: 129px;
+      right: 20%;
+      top: 5%;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+}

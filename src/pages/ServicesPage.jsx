@@ -5,6 +5,7 @@ import Banner from '../components/ServicesPage/Banner/Banner';
 import Guide from '../components/ServicesPage/Guide/Guide';
 import Free from '../components/ServicesPage/Free/Free';
 import Cash from '../components/ServicesPage/Cash/Cash';
+import Program from '../components/ServicesPage/Program/Program';
 import Securities from '../components/ServicesPage/Securities/Securities';
 import Reach from '../components/ServicesPage/Reach/Reach';
 
@@ -21,6 +22,7 @@ function ServicesPage() {
         <Guide />
         <Free />
         <Cash />
+        <Program />
         <Securities />
         <Reach />
         <Footer />

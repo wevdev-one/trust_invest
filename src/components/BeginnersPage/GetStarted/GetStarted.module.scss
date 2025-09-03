@@ -1,0 +1,114 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+  }
+
+  .text {
+    font-weight: 400;
+    color: $black70;
+  }
+
+  .item {
+    &Title {
+      font-weight: 500;
+      color: #000;
+      font-family: $manrope;
+    }
+
+    &Text {
+      font-weight: 300;
+      color: $black70;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &Item {
+      border-radius: 20px;
+      background-color: #FFF;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .icon {
+    width: auto;
+    height: 42px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 600px);
+      justify-content: space-between;
+    }
+
+    .left {
+      max-width: 500px;
+    }
+
+    .text {
+      margin-top: 40px;
+      max-width: 470px;
+    }
+
+    .list {
+      &Item {
+        min-height: 172px;
+        padding: 20px;
+        gap: 14px;
+      }
+    }
+
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .text {
+      margin-top: 20px;
+    }
+
+    .list {
+      &Item {
+        min-height: 172px;
+        padding: 15px 20px;
+        gap: 12px;
+      }
+    }
+
+    .itemTitle {
+      margin-top: 8px;
+    }
+  }
+}

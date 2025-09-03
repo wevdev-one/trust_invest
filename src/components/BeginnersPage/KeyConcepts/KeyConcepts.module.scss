@@ -1,0 +1,140 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .container {
+    border-radius: 20px;
+    background-color: #05060F;
+  }
+
+  .title {
+    color: #fff;
+
+    span {
+      color: $colored;
+    }
+  }
+
+  .text {
+    font-weight: 300;
+    color: $white70;
+    font-style: italic;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    gap: 40px;
+
+    &Item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  .item {
+    &Title {
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    &Text {
+      font-weight: 300;
+      color: $white70;
+    }
+  }
+
+  .check {
+    flex-shrink: 0;
+  }
+
+  .index {
+    position: relative;
+    flex-shrink: 0;
+    color: $colored;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      max-width: 1220px;
+      padding: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 480px);
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 30px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .check {
+      width: 43px;
+      height: 56px;
+
+      &Wrap {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+
+    .index {
+      width: 51px;
+      height: 38px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 20px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .check {
+      width: 34px;
+      height: 44px;
+      margin-bottom: 12px;
+    }
+
+    .index {
+      width: 46px;
+      height: 32px;
+    }
+  }
+}

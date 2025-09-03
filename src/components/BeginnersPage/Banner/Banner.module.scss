@@ -1,0 +1,78 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .container {
+    background-color: #05060F;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .text {
+    color: $white70;
+    font-weight: 300;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 0 0 60px;
+
+    .container {
+      min-height: 480px;
+      position: relative;
+      gap: 10px;
+      padding: 60px 80px;
+      max-width: 1220px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text, .title {
+      max-width: 455px;
+    }
+
+    .text {
+      margin-top: 20px;
+    }
+
+    .image {
+      position: absolute;
+      max-width: 495px;
+      max-height: 430px;
+      right: 5%;
+      bottom: 0;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 0 20px 40px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px 20px 0;
+    }
+
+    .text {
+      margin: 10px 0;
+    }
+
+    .image {
+      margin-top: 15px;
+      order: 99;
+    }
+  }
+}

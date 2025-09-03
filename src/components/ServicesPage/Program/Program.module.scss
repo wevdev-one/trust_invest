@@ -1,0 +1,113 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+  }
+
+  .text {
+    font-weight: 400;
+    color: $black70;
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  .item {
+    border-radius: 20px;
+    background: #FFF;
+    padding: 20px;
+    position: relative;
+
+    &Title {
+      color: #000;
+    }
+
+    &Text {
+      margin-top: 12px;
+      font-weight: 300;
+      color: $black70;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .item {
+      padding: 25px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .content {
+      max-width: 420px;
+    }
+
+    .list {
+      max-width: 700px;
+      width: 75%;
+    }
+
+    .left {
+      max-width: 415px;
+    }
+
+    .icon {
+      width: 112px;
+      height: 110px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .title {
+      // text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .list {
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .item {
+      padding: 42px 20px 30px;
+      &Title {
+        margin-bottom: 33px;
+        padding-left: 85px;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      width: 63px;
+      height: 64px;
+      top: 20px;
+      left: 20px;
+    }
+  }
+}
