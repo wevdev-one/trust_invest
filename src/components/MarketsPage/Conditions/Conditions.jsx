@@ -11,17 +11,17 @@ const Conditions = () => {
     <div className={styles.wrap}>
       <div className={`${styles.container} container`}>
         <div className={styles.item}>
-          <div>
-            <div className={`${styles.title} titleColor font-64-32`}><Trans>{t('markets.conditions.title')}</Trans></div>
+          <div className={styles.inner}>
+            <div className={`${styles.title} font-40-24`}><Trans>{t('markets.conditions.title0')}</Trans></div>
             <div className={`${styles.text} font-14-12`}>{t('markets.conditions.text0')}</div>
           </div>
           <img src={image1} alt="" className={`${styles.image}`} loading="lazy" />
 
         </div>
-        <div>
+        <div className={styles.item}>
           <img src={image2} alt="" className={`${styles.image}`} loading="lazy" />
-          <div>
-            <div className={`${styles.subtitle} font-16-14`}>{t('markets.conditions.text1')}</div>
+          <div className={styles.inner}>
+            <div className={`${styles.title} font-40-24`}>{t('markets.conditions.title1')}</div>
             <div className={`${styles.text} font-16-14`}>{t('markets.conditions.text1')}</div>
           </div>
         </div>

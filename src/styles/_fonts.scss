@@ -2,24 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.font-64-32 {
+.font-64-36, .font-64-32 {
     font-family: $manrope;
     font-weight: 500;
     font-size: 64px;
     line-height: 120%;
 }
 
-.font-48-32 {
+.font-48-32, .font-48-24 {
     font-family: $manrope;
     font-weight: 500;
     font-size: 48px;
     line-height: 120%;
 }
 
-.font-48-24 {
+.font-40-32, .font-40-24 {
     font-family: $manrope;
     font-weight: 500;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 120%;
 }
 
@@ -67,11 +67,15 @@
 
 @media screen and (max-width: $land-768) {
 
-    .font-64-32, .font-48-32 {
+    .font-64-36 {
+        font-size: 36px;
+    }
+
+    .font-64-32, .font-48-32, .font-40-32 {
         font-size: 32px;
     }
 
-    .font-48-24 {
+    .font-48-24, .font-40-24 {
         font-size: 24px;
     }
 

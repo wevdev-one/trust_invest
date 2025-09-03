@@ -12,7 +12,8 @@ const Open = () => {
     <div className={styles.wrap}>
       <div className={`${styles.container} container`}>
         <img src={image} alt="" className={styles.image} />
-        <div>
+        <div className={styles.content}>
+          <img src={arrow} alt="" className={styles.arrow} />
           <div className={`${styles.title} font-48-24`}><Trans>{t('main.open.title')}</Trans></div>
           <div className={`${styles.text} font-14-12`}><Trans>{t('main.open.text')}</Trans></div>
           <div className={`${styles.btn} mt-btn`}><Button black>{t('btn.seemore')}</Button></div>

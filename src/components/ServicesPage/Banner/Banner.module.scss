@@ -20,7 +20,7 @@
   }
 
   .subtitle {
-    color: $colored;
+     color: #fff;
     font-family: $manrope;
     font-weight: 500;
   }
@@ -32,6 +32,30 @@
     object-fit: cover;
   }
 
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &Item {
+      padding-left: 18px;
+      color: #fff;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: $colored;
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+
   @media screen and (min-width: $land-768) {
     padding: 0 0 60px;
 
@@ -39,7 +63,7 @@
       min-height: 655px;
       // display: flex;
       position: relative;
-      gap: 20px;
+      gap: 10px;
       padding: 77px 60px 40px 80px;
       max-width: 1220px;
       display: flex;
@@ -47,25 +71,31 @@
     }
 
     .title {
-      margin-bottom: 20px;
+      // margin-bottom: 10px;
+    }
+
+    .text, .subtitle {
+      max-width: 460px;
     }
 
     .text {
-      max-width: 360px;
+      margin-top: 30px;
     }
 
     .image {
       position: absolute;
-      max-width: 455px;
-      max-height: 474px;
+      max-width: 629px;
+      max-height: 568px;
       flex-shrink: 0;
-      aspect-ratio: 496/497;
-      right: 10%;
+      right: 0;
       bottom: 0;
     }
 
-    .subtitle {
+    .bot {
       margin-top: auto;
+      display: flex;
+      align-items: flex-end;
+      gap: 80px;
     }
   }
   
@@ -76,19 +106,15 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding: 30px 20px;
+      padding: 30px 20px 0;
     }
 
     .text {
-      margin: 20px 0;
-    }
-
-    .subtitle {
-      margin-top: 30px;
+      margin: 10px 0;
     }
 
     .image {
-      margin-top: 40px;
+      margin-top: 15px;
       order: 99;
     }
   }

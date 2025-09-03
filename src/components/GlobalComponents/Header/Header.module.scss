@@ -72,7 +72,7 @@
 
         &.linkActive, &:hover {
           font-weight: 600;
-          color: $seccolor;
+          color: $black;
         }
 
         img {
@@ -249,13 +249,13 @@
   }
 }
 
-:global(body.pl), :global(body.ro), :global(body.ru) {
-  @media screen and (min-width: $land-768) {
-    .headerMenu {
-      li .navItem {
-        padding: 8px 10px;
-        font-size: 14px;
-      }
-    }
-  }
-}
+// :global(body.pl), :global(body.ro), :global(body.ru) {
+//   @media screen and (min-width: $land-768) {
+//     .headerMenu {
+//       li .navItem {
+//         padding: 8px 10px;
+//         font-size: 14px;
+//       }
+//     }
+//   }
+// }

@@ -1,6 +1,9 @@
 import Header from '../components/GlobalComponents/Header/Header';
 import Footer from '../components/GlobalComponents/Footer/Footer';
 import HelmetLayout from '../components/GlobalComponents/HelmetLayout';
+import Banner from '../components/MarketsPage/Banner/Banner';
+import Conditions from '../components/MarketsPage/Conditions/Conditions';
+import Tabs from '../components/MarketsPage/Tabs/Tabs';
 
 function MarketsPage() {
   return (
@@ -11,6 +14,9 @@ function MarketsPage() {
     >
       <div className='ovf-hidden padd-page'>
         <Header />
+        <Banner />
+        <Conditions />
+        <Tabs />
         <Footer />
       </div>
     </HelmetLayout>

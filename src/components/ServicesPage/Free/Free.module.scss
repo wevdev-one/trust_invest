@@ -1,0 +1,114 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    gap: 20px;
+
+    &Item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      // justify-content: flex-end;
+      border-radius: 20px;
+      background: #FFF;
+
+      &:nth-child(3) {
+        padding: 0;
+        .icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .item {
+
+    &Title {
+      font-weight: 500;
+      margin: 30px 0 12px;
+    }
+
+    &Title{
+      color: #000;
+    }
+
+    &Text {
+      color: $black70;
+      font-weight: 300;
+    }
+  }
+
+  .icon {
+    width: 66px;
+    height: 63px;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .text {
+      max-width: 500px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 60px;
+
+      &Item {
+        min-height: 242px;
+        padding: 20px;
+
+        &:first-child, &:last-child {
+          grid-column: span 3;
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          grid-column: span 2;
+        }
+
+      }
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      &Item {
+        min-height: 163px;
+        padding: 20px;
+
+        &:nth-child(3) {
+          order: 99;
+        }
+      }
+    }
+  }
+}

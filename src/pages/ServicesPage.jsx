@@ -1,6 +1,12 @@
 import Header from '../components/GlobalComponents/Header/Header';
 import Footer from '../components/GlobalComponents/Footer/Footer';
 import HelmetLayout from '../components/GlobalComponents/HelmetLayout';
+import Banner from '../components/ServicesPage/Banner/Banner';
+import Guide from '../components/ServicesPage/Guide/Guide';
+import Free from '../components/ServicesPage/Free/Free';
+import Cash from '../components/ServicesPage/Cash/Cash';
+import Securities from '../components/ServicesPage/Securities/Securities';
+import Reach from '../components/ServicesPage/Reach/Reach';
 
 function ServicesPage() {
   return (
@@ -11,6 +17,12 @@ function ServicesPage() {
     >
       <div className='ovf-hidden padd-page'>
         <Header />
+        <Banner />
+        <Guide />
+        <Free />
+        <Cash />
+        <Securities />
+        <Reach />
         <Footer />
       </div>
     </HelmetLayout>

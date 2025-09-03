@@ -8,6 +8,7 @@ import Assets from '../components/HomePage/Assets/Assets';
 import Broker from '../components/HomePage/Broker/Broker';
 import Verify from '../components/HomePage/Verify/Verify';
 import Profit from '../components/HomePage/Profit/Profit';
+import Open from '../components/HomePage/Open/Open';
 
 function HomePage() {
   return (
@@ -24,6 +25,7 @@ function HomePage() {
         <Broker />
         <Verify />
         <Profit />
+        <Open />
         <Footer />
       </div>
     </HelmetLayout>

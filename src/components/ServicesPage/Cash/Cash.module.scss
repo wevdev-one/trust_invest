@@ -7,22 +7,15 @@
   .container {
     background-color: #05060F;
     border-radius: 20px;
-    overflow: hidden;
   }
 
   .title {
-    color: #fff;
+    color: $colored;
   }
 
   .text {
     color: $white70;
     font-weight: 300;
-  }
-
-  .subtitle {
-    color: $colored;
-    font-family: $manrope;
-    font-weight: 500;
   }
 
   .image {
@@ -32,64 +25,59 @@
     object-fit: cover;
   }
 
+  .subtitle {
+    font-weight: 500;
+    color: #fff;
+  }
+
   @media screen and (min-width: $land-768) {
-    padding: 0 0 60px;
+    padding: 60px 0;
 
     .container {
-      min-height: 655px;
-      // display: flex;
       position: relative;
       gap: 20px;
-      padding: 77px 60px 40px 80px;
+      padding: 80px 60px;
       max-width: 1220px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .title {
-      margin-bottom: 20px;
-    }
-
-    .text {
-      max-width: 360px;
+      overflow: hidden;
     }
 
     .image {
       position: absolute;
-      max-width: 455px;
-      max-height: 474px;
-      flex-shrink: 0;
-      aspect-ratio: 496/497;
-      right: 10%;
+      max-height: 356px;
+      max-width: 445px;
+      right: 2%;
       bottom: 0;
     }
 
     .subtitle {
-      margin-top: auto;
+      margin: 20px 0 12px;
+    }
+
+    .text {
+      max-width: 400px;
     }
   }
   
   @media screen and (max-width: $land-767) {
-    padding: 0 20px 40px;
+    padding: 40px 20px;
 
     .container {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 30px 20px;
+      padding: 40px 20px 0;
     }
 
-    .text {
-      margin: 20px 0;
+    .title, .text {
+      padding-right: 30px;
     }
 
     .subtitle {
-      margin-top: 30px;
+      margin: 6px 0 20px;
     }
 
     .image {
-      margin-top: 40px;
       order: 99;
+      margin-top: 60px;
     }
   }
 }

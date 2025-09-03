@@ -1,0 +1,143 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+
+    span {
+      position: relative;
+      padding-left: 10px;
+    }
+  }
+
+  .bg {
+    background-color: #fff;
+    border-radius: 20px;
+
+    .text {
+      max-width: 400px;
+      margin-top: 20px;
+      font-weight: 400;
+    }
+  }
+
+  .text {
+    color: $black70;
+    font-weight: 300;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+  }
+
+  .list {
+    ul {
+      margin: 20px 0 0;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li {
+        list-style-type: disc;
+        list-style-position: outside;
+        color: $black70;
+        font-weight: 300;
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  .check {
+    width: 35px;
+    height: 47px;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .bg {
+      position: relative;
+      gap: 20px;
+      padding: 45px 40px;
+      overflow: hidden;
+      min-height: 242px;
+    }
+
+    .image {
+      position: absolute;
+      max-height: 242px;
+      max-width: 560px;
+      right: 0;
+      bottom: 0;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, 500px);
+      justify-content: space-between;
+      margin-top: 60px;
+
+      .title {
+        margin-bottom: 40px;
+      }
+    }
+
+    .icon {
+      // width: 220px;
+      // height: 84px;
+      width: 120%;
+      height: 140%;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px 0;
+      gap: 20px;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+
+      .title {
+        margin-bottom: 12px;
+      }
+    }
+
+    .bg {
+      padding: 40px 20px;
+    }
+
+    .check {
+      width: 35px;
+      height: 47px;
+    }
+
+  }
+}
