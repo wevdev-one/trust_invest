@@ -1,6 +1,8 @@
 import Header from '../components/GlobalComponents/Header/Header';
 import Footer from '../components/GlobalComponents/Footer/Footer';
 import HelmetLayout from '../components/GlobalComponents/HelmetLayout';
+import Banner from '../components/AccountPage/Banner/Banner';
+import Accounts from '../components/AccountPage/Accounts/Accounts';
 
 function AccountPage() {
   return (
@@ -11,6 +13,8 @@ function AccountPage() {
     >
       <div className='padd-page padd-acc ovf-hidden'>
         <Header />
+        <Banner />
+        <Accounts />
         <Footer />
       </div>
     </HelmetLayout>

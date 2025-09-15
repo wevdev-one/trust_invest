@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/GlobalComponents/Header/Header';
 import Footer from '../components/GlobalComponents/Footer/Footer';
 import HelmetLayout from '../components/GlobalComponents/HelmetLayout';
+import FAQs from '../components/FAQsPage/Tabs/Tabs';
 
 function FAQsPage() {
   return (
@@ -12,6 +13,7 @@ function FAQsPage() {
     >
       <div className='padd-page ovf-hidden'>
         <Header />
+        <FAQs />
         <Footer />
       </div>
     </HelmetLayout>

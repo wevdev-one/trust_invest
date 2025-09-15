@@ -7,8 +7,11 @@ import Instruments from '../components/BeginnersPage/Instruments/Instruments';
 import Assets from '../components/BeginnersPage/Assets/Assets';
 import PlusMinus from '../components/BeginnersPage/PlusMinus/PlusMinus';
 import KeyConcepts from '../components/BeginnersPage/KeyConcepts/KeyConcepts';
+import Strategy from '../components/BeginnersPage/Strategy/Strategy';
+import Leverage from '../components/BeginnersPage/Leverage/Leverage';
 import StopLoss from '../components/BeginnersPage/StopLoss/StopLoss';
 import MustDo from '../components/BeginnersPage/MustDo/MustDo';
+import Details from '../components/BeginnersPage/Details/Details';
 import Conclusion from '../components/BeginnersPage/Conclusion/Conclusion';
 import GetStarted from '../components/BeginnersPage/GetStarted/GetStarted';
 
@@ -27,8 +30,11 @@ function BeginnersPage() {
         <Assets />
         <PlusMinus />
         <KeyConcepts />
+        <Strategy />
+        <Leverage />
         <StopLoss />
         <MustDo />
+        <Details />
         <Conclusion />
         <GetStarted />
         <Footer />

@@ -1,0 +1,152 @@
+@import '../../../styles/variables';
+
+.wrap {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+
+  .centered {
+    text-align: center;
+  }
+
+  .title {
+    color: #05060F;
+    text-align: center;
+  }
+
+  .text {
+    color: $maintext;
+    margin-bottom: 10px;
+  }
+
+  .tab {
+    &sContent {
+      width: 100%;
+    }
+
+    &sWrap {
+      // display: flex;
+      // align-items: flex-start;
+      // gap: 10%;
+      margin: 50px auto 0;
+      max-width: 1000px;
+    }
+
+    &Buttons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 40px;
+
+      button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        cursor: pointer;
+        // font-family: $inter;
+        padding: 12px 40px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        color: #3B3F40;
+        background: transparent;
+        border-radius: 60px;
+        border: 1px solid #05060F;
+        flex: 1 1 auto;
+
+        &.tabActive {
+          background-color: #05060F;
+          color: #fff;
+        }
+
+        .icon {
+          width: 20px;
+          height: 40px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    &Item {
+      display: none;
+
+      &.tabItemActive {
+        display: block;
+      }
+
+      ul {
+        margin-top: 10px;
+        li {
+          list-style-type: disc;
+          list-style-position: inside;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $land-768) {
+    padding: 50px 0;
+
+    .title {
+      text-align: left;
+    }
+
+    .container {
+      // flex-direction: column;
+      // gap: 60px;
+    }
+
+    .item {
+      max-width: unset;
+      width: 100%;
+    }
+
+    .tab {
+      &sContent {
+        margin-top: 0;
+        border-left: 0;
+      }
+
+      &sWrap {
+        margin-top: 30px;
+      }
+
+      &Item {
+        flex-direction: column;
+        padding: 0;
+      }
+  
+      &Buttons {
+        gap: 10px 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: unset;
+
+        .btnWrap {
+          &:last-child {
+            grid-column: span 2;
+          }
+        }
+        
+        button {
+          justify-content: center;
+          font-size: 14px;
+          line-height: 110%;
+          margin: 0;
+          min-height: 35px;
+          padding: 7px;
+          text-align: center;
+
+          &.tabActive {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+    margin-bottom: 20px;
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .text {
+    font-weight: 300;
+    color: $black70;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 540px);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .title {
+      img {
+        width: 246px;
+        height: 84px;
+        top: -5px;
+      }
+    }
+
+    .text {
+      max-width: 415px;
+    }
+  }
+
+  .image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .title {
+      width: max-content;
+
+      img {
+        position: absolute;
+        width: 149px;
+        height: 50px;
+        top: -5px;
+        right: -25px;
+      }
+    }
+  }
+}

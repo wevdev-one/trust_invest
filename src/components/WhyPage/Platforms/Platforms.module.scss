@@ -1,0 +1,86 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+  }
+
+  .title2 {
+    text-align: right;
+  }
+
+  .text {
+    color: $black70;
+    font-weight: 400;
+    position: relative;
+  }
+
+  .item {
+    &Title {
+      position: relative;
+      font-weight: 500;
+      color: #05060F;
+      margin-bottom: 10px;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .titles {
+      max-width: 500px;
+    }
+
+    .item {
+      &Title, .text {
+        padding-left: 54px;
+      }
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px 20px;
+      margin-top: 55px;
+    }
+
+    .icon {
+      width: 28px;
+      height: 23px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .titles {
+      width: 90%;
+    }
+
+    .item {
+      margin-top: 20px;
+
+      &Title, .text {
+        padding-left: 34px;
+      }
+    }
+
+    .list {
+      margin-top: 20px;
+    }
+
+    .icon {
+      width: 20px;
+      height: 17px;
+    }
+  }
+}

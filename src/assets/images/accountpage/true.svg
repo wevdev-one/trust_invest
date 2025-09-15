@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+  <foreignObject x="-12.2571" y="-12.2571" width="46.5143" height="46.5143"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(6.13px);clip-path:url(#bgblur_0_1762_2429_clip_path);height:100%;width:100%"></div></foreignObject><circle data-figma-bg-blur-radius="12.2571" cx="11" cy="11" r="11" fill="#839CB5"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4903 7.85997C16.4921 8.06598 16.4129 8.26445 16.2698 8.41264L10.3769 14.3055C10.2296 14.4528 10.0298 14.5355 9.82143 14.5355C9.61308 14.5355 9.41327 14.4528 9.26593 14.3055L6.12307 11.1626C5.97995 11.0145 5.90075 10.816 5.90254 10.61C5.90433 10.404 5.98696 10.2069 6.13264 10.0612C6.27832 9.91554 6.47539 9.8329 6.6814 9.83111C6.88741 9.82932 7.08588 9.90852 7.23407 10.0516L9.82143 12.639L15.1588 7.30164C15.307 7.15852 15.5054 7.07932 15.7115 7.08111C15.9175 7.0829 16.1145 7.16554 16.2602 7.31121C16.4059 7.45689 16.4885 7.65396 16.4903 7.85997Z" fill="white"/>
+  <defs>
+    <clipPath id="bgblur_0_1762_2429_clip_path" transform="translate(12.2571 12.2571)"><circle cx="11" cy="11" r="11"/>
+  </clipPath></defs>
+</svg>

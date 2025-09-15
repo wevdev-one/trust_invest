@@ -9,7 +9,7 @@
     line-height: 120%;
 }
 
-.font-48-32, .font-48-24 {
+.font-48-32, .font-48-24, .font-48-28 {
     font-family: $manrope;
     font-weight: 500;
     font-size: 48px;
@@ -23,7 +23,7 @@
     line-height: 120%;
 }
 
-.font-36-20 {
+.font-36-24, .font-36-20 {
     font-family: $manrope;
     font-weight: 500;
     font-size: 36px;
@@ -80,7 +80,11 @@
         font-size: 32px;
     }
 
-    .font-48-24, .font-40-24, .font-32-24 {
+    .font-48-28 {
+        font-size: 28px;
+    }
+
+    .font-48-24, .font-40-24, .font-36-24, .font-32-24 {
         font-size: 24px;
     }
 

@@ -1,0 +1,77 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .container {
+    background-color: #05060F;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .text {
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 0 0 60px;
+
+    .container {
+      position: relative;
+      padding: 60px 80px;
+      max-width: 1220px;
+      display: flex;
+    }
+
+    .list, .title {
+      max-width: 380px;
+    }
+
+    .image {
+      position: absolute;
+      max-width: 750px;
+      max-height: 480px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 0 20px 40px;
+
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      padding: 40px 0 0;
+    }
+
+    .title {
+      order: 99;
+      padding: 0 20px;
+    }
+
+    .list {
+      order: 98;
+      padding: 0 20px;
+    }
+
+    .image {
+      margin-top: 15px;
+      order: -1;
+    }
+  }
+}

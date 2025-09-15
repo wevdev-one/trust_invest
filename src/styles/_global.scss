@@ -229,6 +229,22 @@ code {
   font-weight: 600;
 }
 
+.row-item span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('../assets/images/accountpage/true.svg') no-repeat center;
+  background-size: contain;
+}
+
+.row-item i {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('../assets/images/accountpage/false.svg') no-repeat center;
+  background-size: contain;
+}
+
 @media screen and (max-width: 767px) {
 
   .desk_only {

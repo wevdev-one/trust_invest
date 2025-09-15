@@ -1,0 +1,125 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+
+  .title {
+    color: #05060F;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-weight: 500;
+    color: #05060F;
+    font-family: $manrope;
+    line-height: 150%;
+  }
+
+  .text {
+    font-weight: 300;
+    color: $black70;
+
+    & + .text {
+      margin-top: 20px;
+    }
+  }
+
+  .right {
+    border-radius: 20px;
+    background-color: #FFF;
+    position: relative;
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  .check {
+    flex-shrink: 0;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    font-weight: 400;
+    color: #05060F;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 26%;
+    top: 28%;
+    width: 53px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: $land-768) {
+    padding: 60px 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 500px);
+      justify-content: space-between;
+    }
+
+    .item .title {
+      margin-bottom: 40px;
+    }
+
+    .right {
+      padding: 40px 40px 50px;
+    }
+
+    .subtitle {
+      margin-bottom: 40px;
+    }
+
+    .check {
+      width: 28px;
+      height: 23px;
+    }
+
+    .list {
+      padding-left: 60px;
+    }
+  }
+  
+  @media screen and (max-width: $land-767) {
+    padding: 40px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .item .title {
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      margin-bottom: 23px;
+    }
+
+    .check {
+      width: 23px;
+      height: 19px;
+    }
+
+    .list {
+      margin-top: 12px;
+      padding-left: 10px;
+    }
+
+    .right {
+      padding: 30px 40px;
+    }
+
+    .arrow {
+      right: 10%;
+      top: 24%;
+    }
+  }
+}
