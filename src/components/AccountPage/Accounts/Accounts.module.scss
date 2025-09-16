@@ -204,12 +204,6 @@
 
   .body {
     .flex {
-      &:nth-child(4) {
-        .row:not(:first-child) {
-          color: $colored;
-          font-size: 16px;
-        }
-      }
       .row {
         max-width: unset;
         font-size: 14px;

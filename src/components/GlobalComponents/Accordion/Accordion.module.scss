@@ -15,7 +15,7 @@
     &.itemActive {
       
       .icon img {
-        transform: rotate(-90deg);
+        transform: rotate(0);
       }
 
       .content {
@@ -56,6 +56,7 @@
       width: 34px;
       height: 20px;
       transition: transform 0.4s linear;
+      transform: rotate(-90deg);
     }
   }
 

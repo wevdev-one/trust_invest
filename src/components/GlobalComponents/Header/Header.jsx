@@ -110,6 +110,7 @@ const Header = () => {
                   placeholder="EN"
                   onChange={handleChangeLang}
                   value={languages.find(lang => lang.value === currentLang)}
+                  className='desk_only'
                 />
                 <div className={styles.mrl}><Button login header>{t('btn.login')}</Button></div>
             </div>

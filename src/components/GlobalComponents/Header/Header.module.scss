@@ -153,10 +153,8 @@
   }
 
   @media (max-width: $landnav) {
-    height: 80px;
+    height: 71px;
     top: 0;
-    background-color: #fff;
-    border-bottom: 2px solid rgba(141, 141, 141, 0.50);
 
     .container {
       max-width: unset;

@@ -11,6 +11,11 @@
     margin-bottom: 40px;
   }
 
+  .mart {
+    width: 100%;
+    position: relative;
+  }
+
   .slider {
     &Wrap {
       width: 100%;
@@ -54,13 +59,15 @@
       img {
         filter: grayscale(100%);
         height: auto;
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 105px;
+        max-height: 105px;
       }
       
       &.active {
         img {
           filter: grayscale(0);
+          max-width: 200px;
+          max-height: 200px;
         }
       }
     }
@@ -73,43 +80,80 @@
       margin-bottom: 40px;
     }
 
-    .grid {
-      // display: grid;
-      // grid-template-columns: repeat(7, 1fr);
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      justify-items: center;
+    .slider {
       height: 220px;
-        
+      width: 100%;
+      
       &Item {
-        cursor: pointer;
-        transition: filter 0.3s ease, transform 0.3s ease;
-        padding: 10px;
+        height: auto;
+        transition: transform 0.3s ease;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1;
 
         img {
-          display: block;
-          max-width: 100%;
-          filter: grayscale(1);
+          max-height: 105px;
+          max-width: 105px;
           transition: filter 0.3s ease;
-          transform: scale(0.9);
           width: auto;
           height: auto;
         }
 
         &.active {
-          // margin: 0 50px;
-          flex-grow: 2;
+          // transform: scale(1.5);
+          z-index: 10;
+          position: relative;
+          transition: transform 0.3s ease;
+          margin: 0 50px!important;
+
           img {
             filter: grayscale(0);
-            transform: scale(1);
-            max-width: 200px;
-            max-height: 200px;
+            transition: filter 0.3s ease;
           }
+        }
+      }
+
+      &Btns {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9999;
+        width: 100%;
+        margin-top: 0;
+        height: 50px;
+      }
+      &Btn {
+        position: absolute;
+        right: 26%;
+
+        &.sliderBtnPrev {
+          right: unset;
+          left: 38%;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $land-992) {
+    .slider {
+      &Btn {
+        right: 33%;
+
+        &.sliderBtnPrev {
+          left: 42%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $landnav) {
+    .slider {
+      &Btn {
+        right: 34%;
+
+        &.sliderBtnPrev {
+          left: 42%;
         }
       }
     }

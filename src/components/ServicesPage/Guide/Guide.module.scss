@@ -4,6 +4,10 @@
   position: relative;
   width: 100%;
 
+  .title {
+    color: #05060F;
+  }
+
   .item {
     position: relative;
 
@@ -52,6 +56,10 @@
       display: flex;
       flex-direction: column;
       gap: 80px;
+    }
+
+    .title {
+      margin-bottom: 20px;
     }
   }
 }

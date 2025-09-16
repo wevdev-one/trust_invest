@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from './Awards.module.scss';
 import { Navigation } from 'swiper/modules';
@@ -17,33 +17,42 @@ import image6 from '../../../assets/images/whypage/awards/image6.webp';
 
 const Awards = () => {
   const { t } = useTranslation();
-  const icons = [image0, image1, image2, image3, image4, image5, image6];
+  const icons = [image0, image1, image2, image3, image4, image5, image6, image0, image1, image2, image3, image4, image5, image6];
   const [swiper, setSwiper] = useState({});
   const [active, setActive] = useState(0);
-  const isMobile = window.innerWidth <= 768;
-
-  const handlePrev = () => {
-    setActive((prev) => (prev > 0 ? prev - 1 : icons.length - 1));
-  };
-
-  const handleNext = () => {
-    setActive((prev) => (prev < icons.length - 1 ? prev + 1 : 0));
-  };
-
+  
   return (
     <div className={styles.wrap}>
       <div className={`${styles.container} container`}>
         <div className={`${styles.title} font-64-36`}>{t('why.awards')}</div>
-        {isMobile ? 
-        (
         <div className={styles.mart}>
           <Swiper
             modules={[Navigation]}
-            spaceBetween={0}
-            slidesPerGroup={1}
-            loop={false}
-            onInit={(e) => { setSwiper(e) }}
-            onSlideChange={(e) => setActive(e.activeIndex)}
+            loop={true}
+            onSwiper={setSwiper}
+            onSlideChange={(e) => setActive(e.realIndex)}
+            breakpoints={{
+              0: { 
+                slidesPerView: 1,
+                centeredSlides: true,
+              },
+              768: { 
+                slidesPerView: 3,
+                spaceBetween: 20,
+                centeredSlides: true,
+              },
+              992: { 
+                slidesPerView: 5,
+                spaceBetween: 30,
+                centeredSlides: true,
+              },
+              1200: { 
+                slidesPerView: 7, 
+                spaceBetween: 0, 
+                centeredSlides: true,
+              },
+            }}
+            className={styles.slider}
           >
             {icons.map((item, index) => (
               <SwiperSlide key={`awards-${index}`} className={`${styles.sliderItem} ${active === index ? styles.active : ""}`}>
@@ -66,35 +75,6 @@ const Awards = () => {
             </button>
           </div>
         </div>
-        ) : (
-          <>
-            <div className={styles.grid}>
-              {icons.map((item, index) => (
-                <div
-                  key={`award-${index}`}
-                  className={`${styles.gridItem} ${active === index ? styles.active : ""}`}
-                >
-                  <img src={item} alt="" loading="lazy" />
-                </div>
-              ))}
-            </div>
-            <div className={styles.sliderBtns}>
-              <button 
-                className={`${styles.sliderBtn} ${styles.sliderBtnPrev} ${active === 0 ? styles.disabled : ""}`}
-                onClick={handlePrev}
-              >
-                <img src={icon} alt="Prev" />
-              </button>
-              <button 
-                className={`${styles.sliderBtn} ${styles.sliderBtnNext} ${active === swiper.snapGrid?.length - 1 ? styles.inactive : ''}`}
-                onClick={handleNext}
-              >
-                <img src={icon} alt="Next" />
-              </button>
-            </div>
-          </>
-          ) 
-        }
       </div>
     </div>
   );
