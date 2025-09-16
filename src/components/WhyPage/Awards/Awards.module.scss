@@ -1,0 +1,138 @@
+@import "../../../styles//variables";
+
+.wrap {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+
+  .title {
+    text-align: center;
+    color: #05060F;
+    margin-bottom: 40px;
+  }
+
+  .slider {
+    &Wrap {
+      width: 100%;
+    }
+    &Btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+      z-index: 99;
+      margin-top: 25px;
+    }
+
+    &Btn {
+      width: 34px;
+      height: 20px;
+      flex-shrink: 0;
+      transform: rotate(-90deg);
+      background-color: transparent;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &.sliderBtnPrev {
+        transform: rotate(90deg);
+      }
+
+      &.inactive {
+        opacity: 0.5;
+      }
+    }
+
+    &Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        filter: grayscale(100%);
+        height: auto;
+        max-width: 200px;
+        max-height: 200px;
+      }
+      
+      &.active {
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $land-769) {
+    padding: 60px 0;
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      // display: grid;
+      // grid-template-columns: repeat(7, 1fr);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-items: center;
+      height: 220px;
+        
+      &Item {
+        cursor: pointer;
+        transition: filter 0.3s ease, transform 0.3s ease;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        img {
+          display: block;
+          max-width: 100%;
+          filter: grayscale(1);
+          transition: filter 0.3s ease;
+          transform: scale(0.9);
+          width: auto;
+          height: auto;
+        }
+
+        &.active {
+          // margin: 0 50px;
+          flex-grow: 2;
+          img {
+            filter: grayscale(0);
+            transform: scale(1);
+            max-width: 200px;
+            max-height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $land-768) {
+    padding: 40px 0;
+
+    .mart {
+      position: relative;
+    }
+
+    .slider {
+      &Btns {
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        transform: translateY(-50%);
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@ import HelmetLayout from '../components/GlobalComponents/HelmetLayout';
 import Banner from '../components/WhyPage/Banner/Banner';
 import Platforms from '../components/WhyPage/Platforms/Platforms';
 import Broker from '../components/WhyPage/Broker/Broker';
+import Trust from '../components/WhyPage/Trust/Trust';
+import Awards from '../components/WhyPage/Awards/Awards';
 
 function WhyPage() {
   return (
@@ -17,6 +19,8 @@ function WhyPage() {
         <Banner />
         <Platforms />
         <Broker />
+        <Trust />
+        <Awards />
         <Footer />
       </div>
     </HelmetLayout>

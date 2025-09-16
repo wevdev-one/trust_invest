@@ -166,34 +166,34 @@ code {
   }
 }
 
-.swiper-slide-active {
-  background: linear-gradient(259deg, #9F20EA -9.76%, #6825FE 168.42%), rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(23.3100528717041px);
-}
+// .swiper-slide-active {
+//   background: linear-gradient(259deg, #9F20EA -9.76%, #6825FE 168.42%), rgba(255, 255, 255, 0.15);
+//   backdrop-filter: blur(23.3100528717041px);
+// }
 
-.swiper-grid-slider .swiper-slide-active, .pro-slider .swiper-slide-active, .vipacc-slider .swiper-slide-active {
-  background: transparent;
-  backdrop-filter: none;
-}
+// .swiper-grid-slider .swiper-slide-active, .pro-slider .swiper-slide-active, .vipacc-slider .swiper-slide-active {
+//   background: transparent;
+//   backdrop-filter: none;
+// }
 
-.swiper-pagination {
-  position: relative!important;
-  bottom: unset!important;
-  top: unset!important;
-  margin-top: 20px;
-}
+// .swiper-pagination {
+//   position: relative!important;
+//   bottom: unset!important;
+//   top: unset!important;
+//   margin-top: 20px;
+// }
 
-.swiper-pagination-bullet {
-  background-color: #fff!important;
-  width: 6px;
-  height: 6px;
-  opacity: 0.15!important;
-}
+// .swiper-pagination-bullet {
+//   background-color: #fff!important;
+//   width: 6px;
+//   height: 6px;
+//   opacity: 0.15!important;
+// }
 
-.swiper-pagination-bullet-active {
-  background-color: #9F20EA!important;
-  opacity: 1!important;
-}
+// .swiper-pagination-bullet-active {
+//   background-color: #9F20EA!important;
+//   opacity: 1!important;
+// }
 
 .mt {
   margin-top: 160px;
@@ -207,23 +207,23 @@ code {
   }
 }
 
-.swiper-fade {
-  .swiper-slide {
-    opacity: 0!important;
-  }
-  .swiper-slide-active {
-    opacity: 1!important;
-  }
-}
+// .swiper-fade {
+//   .swiper-slide {
+//     opacity: 0!important;
+//   }
+//   .swiper-slide-active {
+//     opacity: 1!important;
+//   }
+// }
 
-@media screen and (min-width: 767px) {
-  .standartacc-slider {
-    .swiper-slide-active + .swiper-slide {
-      transform: translateY(45px)!important;
-      transition: transform 0.4s linear;
-    }
-  }
-}
+// @media screen and (min-width: 767px) {
+//   .standartacc-slider {
+//     .swiper-slide-active + .swiper-slide {
+//       transform: translateY(45px)!important;
+//       transition: transform 0.4s linear;
+//     }
+//   }
+// }
 
 .bolder {
   font-weight: 600;

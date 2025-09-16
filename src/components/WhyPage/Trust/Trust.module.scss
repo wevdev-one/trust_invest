@@ -15,15 +15,41 @@
   }
 
   .text {
-    color: #fff;
+    color: #05060F;
     font-weight: 300;
     position: relative;
   }
 
-  .list {
+  .item {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    position: relative;
+
+    &Title {
+      color: #05060F;
+      font-weight: 500;
+    }
+  }
+
+  .item1 {
+    background: #34F3CA;
+  }
+
+  .item2 {
+    background: #FFF;
+  }
+
+  .item3 {
+    background: #F8F963;
+  }
+
+  .item4 {
+    background: #FFF;
+  }
+
+  .item5 {
+    background: #839CB5;
   }
 
   @media screen and (min-width: $land-768) {
@@ -36,27 +62,86 @@
       display: flex;
     }
 
-    .list, .title {
-      max-width: 380px;
+    .grid {
+      display: flex;
+      gap: 10px;
+
+      &Left {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+    }
+
+    .icon {
+      width: 62px;
+      height: 72px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    .item {
+      padding: 30px 20px;
+    }
+
+    .item1 {
+      grid-column: span 2;
+      min-height: 170px;
+      justify-content: flex-end;
+    }
+
+    .item2 {
+      width: 170px;
+      justify-content: flex-end;
+    }
+
+    .item3 {
+      width: 170px;
+      justify-content: flex-start;
+    }
+
+    .item4 {
+      grid-column: span 2;
+      justify-content: flex-start;
+    }
+
+    .item5 {
+      width: 280px;
+      grid-row: span 2;
+      grid-column: span 2;
+      justify-content: space-around;
+    }
+
+    .left{
+      max-width: 240px;
+      display: flex;
+      flex-direction: column;
     }
 
     .image {
-      position: absolute;
-      max-width: 750px;
-      max-height: 480px;
-      right: 0;
-      bottom: 0;
+      width: 139px;
+      height: 63px;
+    }
+
+    .arrow {
+      width: 163px;
+      height: 46px;
+      flex-shrink: 0;
+      margin-top: auto;
     }
   }
   
   @media screen and (max-width: $land-767) {
-    padding: 0 20px 40px;
+    padding: 40px 20px;
 
     .container {
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 10px;
-      padding: 40px 0 0;
+      padding: 40px 20px 50px;
+    }
+
+    .icon {
+      width: 33px;
+      height: 39px;
     }
 
     .title {
@@ -64,14 +149,29 @@
       padding: 0 20px;
     }
 
-    .list {
-      order: 98;
-      padding: 0 20px;
+    .item {
+      min-height: 143px;
+      justify-content: flex-end;
+      padding: 15px;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 40px;
+
+      &Left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
     }
 
     .image {
-      margin-top: 15px;
-      order: -1;
+      width: 107px;
+      height: 48px;
+      align-self: flex-end;
     }
   }
 }
